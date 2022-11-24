@@ -9,33 +9,56 @@ etc).
 ## Solving the Requirements
 
 ### A) Giving the user feedback by signalling an error only in the field that was not completed:
-<br>
-1- Use the ref to change the line color of the field box and flagging an error:
-<p>HTML Example: ref="fname"</p>
 
-<p>JS Example: this.$refs.fname.classList.add("error");</p><br>
+###### 1- Use the ref to change the line color of the field box and flagging an error:
+*HTML Example:* 
+```
+ref="fname"
+```
+*JS Example:* 
+```
+this.$refs.fname.classList.add("error");
+```
 
-<p>2- Create error notifications in each required field in the HTML, using v-if (vue js) and return true or false to hide or show the messages:</p>
-<p>HTML Example: I think you forgot to write your name.</p>
-<p>JS Example: this.erroFirstname = false;</p><br>
+###### 2- Create error notifications in each required field in the HTML, using v-if (vue js) and return true or false to hide or show the messages:
 
-<p>3- Create inside the processMailFailure function a condition for each input using v-model:</p>
-<p>HTML Example: v-model="form.firstname"</p>
+*HTML Example:* 
+```
+<div class="errorMessage" v-if="erroFirstname">
+  <p>I think you forgot to write your name.</p>
+   <i class="fa-solid fa-circle-exclamation"></i>
+</div>
 
-<p>JS Example</p>
-<p>if(this.form.firstname.length > 0){</p>
-    <p>this.$refs.fname.classList.remove("error");</p>
-    <p>this.erroFirstname = false;</p>
-    <p>} else {</p>
-    <p>this.$refs.fname.classList.add("error");</p>
-    <p>this.erroFirstname = true;</p>
-     <p> }</p>
+```
+*JS Example: this.erroFirstname = false;*
+
+###### 3- Create inside the processMailFailure function a condition for each input using v-model:
+*HTML Example:* 
+```
+v-model="form.firstname"
+```
+*JS Example:*
+```
+if(this.form.firstname.length > 0){
+    this.$refs.fname.classList.remove("error");
+    this.erroFirstname = false;
+    } else {
+    this.$refs.fname.classList.add("error");
+    this.erroFirstname = true;
+     }
+```
 
 ### B- Signal that the message was sent successfully:
-<br>
-1- Create sucess notification in the HTML, using v-if (vue js) and return true or false to hide or show the message.
-<p>v-if="sucessMassage"</p>
-<p>Your message has been sent successfully!</p><br>
 
-<p>2- Create inside the processMailSuccess function the action to show the notification using true:</p>
-<p>this.sucessMassage = true; </p>
+###### 1- Create sucess notification in the HTML, using v-if (vue js) and return true or false to hide or show the message.
+```
+<div class="sucess" v-if="sucessMassage">
+  <p>Your message has been sent successfully!</p>
+   <i class="fa-solid fa-rocket"></i>
+   </div>
+```
+
+###### 2- Create inside the processMailSuccess function the action to show the notification using true:
+```
+this.sucessMassage = true;
+```
