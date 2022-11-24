@@ -1,9 +1,11 @@
 # Mail Form with Vue and POST
-Mail is a homework for Interactive Media Design course.
+Mail Form is homework for the Interactive Media Design course.
+You can test this form by sending me an email at: <br>
+https://emailform.crisdenoronha.com/
+
 ## Assignment Description
-Create a mail API with Vue and AJAX using the POST request. You’ll be sending your mail form
-data to a PHP script via Fetch and the POST request. You’ll need to handle both success and
-failure via the response object and changes to the UI (handle errors, update with visual cues,
+Create a mail API with Vue and AJAX using the POST request. You’ll be sending your mail form data to a PHP script via Fetch and the POST request. 
+You’ll need to handle both success and failure via the response object and changes to the UI (handle errors, update with visual cues,
 etc).
 
 ## Solving the Requirements
@@ -53,7 +55,7 @@ if(this.form.firstname.length > 0){
 
 ### B- Signal that the message was sent successfully:
 
-###### 1- Create sucess notification in the HTML, using v-if (vue js) and return true or false to hide or show the message.
+###### 1- Create a success notification in the HTML, using v-if (vue js) and return true or false to hide or show the message.
 ```
 <div class="sucess" v-if="sucessMassage">
   <p>Your message has been sent successfully!</p>
