@@ -30,7 +30,10 @@ this.$refs.fname.classList.add("error");
 </div>
 
 ```
-*JS Example: this.erroFirstname = false;*
+*JS Example* 
+```
+this.erroFirstname = false;
+```
 
 ###### 3- Create inside the processMailFailure function a condition for each input using v-model:
 *HTML Example:* 
