@@ -16,14 +16,14 @@
             <p>Send me a message!</p>
 
             <form action="mail.php" method="POST" id="mail-form" class="contact-box">
-                <div class="sucess" v-if="sucessMassage">
+                <div class="sucess" v-show="sucessMassage">
                     <p>Your message has been sent successfully!</p>
                     <i class="fa-solid fa-rocket"></i>
                 </div> 
                 <ul>
                     <li>
                     <label for="firstname">First Name</label>
-                    <div class="errorMessage" v-if="erroFirstname">
+                    <div class="errorMessage" v-show="erroFirstname">
                         <p>I think you forgot to write your name.</p>
                         <i class="fa-solid fa-circle-exclamation"></i>
 
@@ -32,7 +32,7 @@
                     </li>
 
                     <li>
-                    <label for="lastname">Last Name</label><div class="errorMessage" v-if="erroLastname">
+                    <label for="lastname">Last Name</label><div class="errorMessage" v-show="erroLastname">
                         <p>I also need to know your lastname.</p>
                         <i class="fa-solid fa-circle-exclamation"></i>
                     </div>
@@ -41,7 +41,7 @@
 
                     <li>
                     <label for="email">Email</label>
-                    <div class="errorMessage" v-if="erroEmail">
+                    <div class="errorMessage" v-show="erroEmail">
                         <p>Please enter a valid email address.</p>
                         <i class="fa-solid fa-circle-exclamation"></i>
                     </div>
@@ -50,7 +50,7 @@
 
                     <li>
                     <label for="message">Message</label>
-                    <div class="errorMessage" v-if="erroMassage">
+                    <div class="errorMessage" v-show="erroMassage">
                         <p>I cannot see your message.</p>
                         <i class="fa-solid fa-circle-exclamation"></i>
                     </div>
