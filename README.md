@@ -24,11 +24,11 @@ ref="fname"
 this.$refs.fname.classList.add("error");
 ```
 
-##### 2- Create error notifications in each required field in the HTML, using v-if (vue js) and return true or false to hide or show the messages:
+##### 2- Create error notifications in each required field in the HTML, using v-show (vue js) and return true or false to hide or show the messages:
 
 *HTML Example:* 
 ```
-<div class="errorMessage" v-if="erroFirstname">
+<div class="errorMessage" v-show="erroFirstname">
   <p>I think you forgot to write your name.</p>
    <i class="fa-solid fa-circle-exclamation"></i>
 </div>
@@ -57,9 +57,9 @@ if(this.form.firstname.length > 0){
 
 ### B- Signal that the message was sent successfully:
 
-##### 1- Create a success notification in the HTML, using v-if (vue js) and return true or false to hide or show the message.
+##### 1- Create a success notification in the HTML, using v-show (vue js) and return true or false to hide or show the message.
 ```
-<div class="sucess" v-if="sucessMassage">
+<div class="sucess" v-show="sucessMassage">
   <p>Your message has been sent successfully!</p>
    <i class="fa-solid fa-rocket"></i>
    </div>
