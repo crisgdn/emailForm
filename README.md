@@ -1,7 +1,9 @@
 # Mail Form with Vue and POST
 Mail Form is homework for the Interactive Media Design course.
 You can test this form by sending me an email at: <br>
-https://emailform.crisdenoronha.com/
+https://emailform.crisdenoronha.com/<br>
+
+**IMPORTANT:** this form works best in the chrome browser.
 
 ## Assignment Description
 Create a mail API with Vue and AJAX using the POST request. You’ll be sending your mail form data to a PHP script via Fetch and the POST request. 
