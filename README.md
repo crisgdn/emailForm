@@ -1,7 +1,7 @@
 # Mail Form with Vue and POST
 Mail Form is homework for the Interactive Media Design course.
 You can test this form by sending me an email at: <br>
-https://crisdenoronha.com/contact.html<br>
+https://emailform.crisdenoronha.com/<br>
 
 **IMPORTANT:** this form works best in the chrome browser.
 
